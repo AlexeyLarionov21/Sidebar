@@ -1,0 +1,55 @@
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  background: transparent;
+  text-decoration: none;
+  border-radius: 6px;
+  height: 36px;
+  color: #8a8a8a;
+
+  &:hover {
+    background: #f0f0f0;
+    color: #13121b;
+  }
+
+  &.active {
+    background: #f0f0f0;
+    color: #13121b;
+  }
+}
+
+.router {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ff5100;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+}
