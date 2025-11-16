@@ -11,7 +11,7 @@ Built with **Vue 3 / Nuxt 3 + SCSS modules**.
 
 ---
 
-THIS ISФ AN OPEN-SOURCE PROJECT
+THIS IS AN OPEN-SOURCE PROJECT
 
 ## Demo
 
