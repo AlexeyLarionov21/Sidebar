@@ -1,7 +1,7 @@
 .sidebar {
   height: 100%;
   background: #ffffff;
-  width: 280px;
+  width: var(--sb-w, 280px);
   border-radius: 16px;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
   transition: width 0.3s ease-in-out;
@@ -9,7 +9,8 @@
   padding: 16px;
 
   &.collapsed {
-    width: 68px;
+    --sb-w: 68px;
+    --logo-w: 0px;
   }
 }
 
@@ -29,7 +30,13 @@
   margin-bottom: 48px;
 }
 
+.logo {
+  width: var(--logo-w, 140px);
+  // border: blue 1px solid;
+}
+
 .buttonCollapse {
+  margin-left: auto;
   height: 36px;
   width: 36px;
   border-radius: 6px;
@@ -40,9 +47,12 @@
   padding: 0;
   border: none;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  background: #f8f8f8;
+  transition: 0.3s ease;
 
   &:hover {
     background: white;
+    color: rgb(255, 94, 0);
   }
 }
 
@@ -58,15 +68,35 @@ p {
 }
 
 .listMenu {
+  padding-inline: 8px;
+  margin-inline: -8px;
   // border: blue 1px solid;
   margin-top: 48px;
-  flex: 1 1 auto;
-  overflow: auto;
+  flex: 0 1 auto;
+  // overflow: auto;
   min-height: 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .footer {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 16px;
   margin-top: auto;
-  height: 68px;
-  background: #666666;
+  margin-bottom: -16px;
+}
+
+@media (max-height: 900px) {
+  .upgradeBlock {
+    display: none !important;
+  }
+  .listMenu {
+    border-bottom: none;
+  }
+}
+
+@media (max-height: 600px) {
+  .footer {
+    border-top: none;
+  }
 }

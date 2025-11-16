@@ -5,13 +5,17 @@
 }
 
 .link {
+  position: relative;
   display: flex;
   align-items: center;
-  margin: 8px 0;
+  margin: 16px 0;
   background: transparent;
   text-decoration: none;
   border-radius: 6px;
   height: 36px;
+
+  box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.1);
+  background: #fff;
   color: #8a8a8a;
 
   &:hover {
@@ -25,31 +29,90 @@
   }
 }
 
+.badgeMarker {
+  animation: pop 0.25s ease;
+  position: absolute;
+  background: #ff5100;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: -3px;
+  right: -3px;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .router {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   padding: 0 16px;
   text-decoration: none;
   color: inherit;
-}
+  transition: padding 0.3s ease;
 
-.left {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+    flex: 0 0 auto;
+    transition: gap 0.3s ease;
+  }
 
-.badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #ff5100;
-  border-radius: 50%;
-  height: 20px;
-  width: 20px;
-  color: white;
-  font-size: 10px;
-  font-weight: 800;
+  .badge {
+    flex: 0 0 auto;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ff5100;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    margin-left: auto;
+    transition: opacity 0.3s ease, width 0.3s ease, margin 0.3s ease;
+  }
+
+  .label {
+    white-space: nowrap;
+    opacity: 1;
+    flex-shrink: 0;
+    min-width: 0;
+    max-width: 200px;
+    transition: opacity 0.3s ease, max-width 0.3s ease, margin 0.3s ease;
+    margin-left: 4px;
+    overflow: hidden;
+  }
+
+  &.collapsed {
+    padding: 0 8px;
+    justify-content: flex-start;
+
+    .badge {
+      opacity: 0;
+      width: 0;
+      margin-left: 0;
+      transition: none;
+    }
+
+    .label {
+      opacity: 0;
+      max-width: 0;
+      margin-left: 0;
+    }
+  }
 }

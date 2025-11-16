@@ -1,8 +1,6 @@
-import { ref } from "vue";
-
-const activeID = ref<string | number>("point_1");
-
 export const useMenuSelection = () => {
+  const activeID = useState<string | number>('menu-active-id', () => 'point_1');
+
   const setActive = (id: string | number) => {
     activeID.value = id;
   };

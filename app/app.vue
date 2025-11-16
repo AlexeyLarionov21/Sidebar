@@ -1,8 +1,8 @@
 <template>
   <div>
     <NuxtLayout>
-      <!-- <NuxtPage /> -->
-      <RouterView />
+      <NuxtPage />
+      <!-- <RouterView /> -->
     </NuxtLayout>
   </div>
 </template>
