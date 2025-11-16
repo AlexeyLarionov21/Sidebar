@@ -1,75 +1,53 @@
-# Nuxt Minimal Starter
+# Sidebar Dashboard UI
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Responsive sidebar layout with:
 
-## Setup
+- Collapsible menu
+- Badges on menu items
+- Dismissible “Upgrade to Pro” card
+- Height-aware behavior (hides promo on small screens)
 
-Make sure to install dependencies:
+Built with **Vue 3 / Nuxt 3 + SCSS modules**.
+
+---
+
+THIS ISФ AN OPEN-SOURCE PROJECT
+
+## Demo
+
+👉 [Live demo on GitHub Pages](https://AlexeyLarionov21.github.io/Sidebar/)
+
+![Sidebar preview](./preview.jpg)
+
+---
+
+## Features
+
+- **Collapsible sidebar** – smooth width transition, icon-only mode
+- **Menu badges** – with compact marker in collapsed mode
+- **Promo card** – closable, remembers state
+- **Small-height optimization** – hides promo & separators for <900px height
+- **SCSS modules** – isolated styles, media-queries for height
+
+---
+
+## Tech stack
+
+- Vue 3 / Nuxt 3 (Composition API)
+- TypeScript
+- SCSS modules
+- Iconify icons
+
+---
+
+## Getting started
 
 ```bash
-# npm
+git clone https://github.com/AlexeyLarionov21/Sidebar.git
+
+cd sidebar
+
 npm install
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

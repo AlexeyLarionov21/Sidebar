@@ -2,6 +2,8 @@
   "name": "side",
   "type": "module",
   "private": true,
+  "homepage": "https://github.com/AlexeyLarionov21/Sidebar/",
+  "description": "Responsive sidebar layout with collapse animation, badges and promo card built with Vue 3/Nuxt.",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
